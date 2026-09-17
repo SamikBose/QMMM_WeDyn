@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "weqmmm"
+version = "0.1.0"
+description = "Modular OpenMM QM/MM dynamics with replaceable quantum providers"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy", "openmm>=8.6", "pyscf>=2.9", "mdtraj", "pyyaml"]
+
+[project.optional-dependencies]
+test = ["pytest", "scipy", "h5py"]
+gpu = ["gpu4pyscf-cuda12x==1.8.1"]
+
+[tool.setuptools.packages.find]
+include = ["weqmmm*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["dynamics: numerical trajectory validation", "gpu: requires an allocated CUDA GPU"]

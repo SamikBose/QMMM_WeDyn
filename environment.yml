@@ -1,0 +1,15 @@
+name: weqmmm
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - openmm>=8.6
+      - pyscf>=2.9
+      - mdtraj
+      - numpy
+      - scipy
+      - h5py
+      - pyyaml
+      - pytest

@@ -1,0 +1,8 @@
+# Installed into .venv-gpu with --system-site-packages from the tested weqmmm
+# interpreter. CUDA/12.4.0 module provides the toolkit on allocated nodes.
+gpu4pyscf-cuda12x==1.8.1
+gpu4pyscf-libxc-cuda12x==0.8.1
+cupy-cuda12x==13.4.1
+cutensor-cu12==2.2.0
+numpy==2.2.6
+pyscf==2.14.0

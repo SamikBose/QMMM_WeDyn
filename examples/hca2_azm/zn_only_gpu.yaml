@@ -1,0 +1,28 @@
+system:
+  prmtop: examples/hca2_azm/data/system_1264.parm7
+  coordinates: examples/hca2_azm/data/hca2_azm_withwater_run1_combined.pdb
+  frame: 0
+partition_file: runs/hca2_azm/zn-only/partition.json
+engine:
+  qm:
+    method: rks
+    xc: b3lyp
+    basis: def2-svp
+    charge: 2
+    spin: 0
+    conv_tol: 1.0e-10
+    conv_tol_grad: 1.0e-07
+    grid_level: 5
+    max_cycle: 50
+    verbose: 4
+    backend: gpu4pyscf_molecular
+  integrator: LangevinMiddle
+  timestep_fs: 0.5
+  temperature_K: 300.0
+  friction_per_ps: 1.0
+  platform: CPU
+  platform_properties:
+    Threads: '1'
+  random_seed: 1
+  check_force_sum: true
+  failure_directory: runs/failures

@@ -1,0 +1,9 @@
+# Exact reference versions from the supplied ZIP. Full installed lock is recorded separately.
+openmm==8.6.1
+pyscf==2.14.0
+mdtraj
+numpy
+scipy
+h5py
+pytest
+pyyaml
